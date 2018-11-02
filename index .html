@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mathimatic practise</title>
+    <link rel="stylesheet" href="Style02.css" />
+    <script src="Script.js"></script>
+
+</head>
+<body>
+<div class="logo">
+    <img alt="" src="src/Lion.jpg" class="logImg">
+    <img alt="" src="src/Girl.jpg" class="logImg">
+    <img alt="" src="src/MashaStady.gif" class="logImg">
+    <img alt="" src="src/thumb.gif" class="logImg">
+    <img alt="" src="src/School1.JPG" class="logImg">
+    <img alt="" src="src/kit.jpg" class="logImg"></div>
+    
+    <div class="conteiner">
+        <div class="firstRow">
+            <form name="SettingsForm">
+                <fieldset><legend>Налаштування</legend>
+                    Тривалість Заняття:
+                    <select name="TimeEx" id="TimeExRead">
+                            <option value="30">30</option>
+                            <option value="60">60</option>
+                    </select> секунд<hr>Кількість літер
+                    <select name="ChAmount" id="ChAmount" >
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                    </select>
+				</fieldset>
+				<fieldset><legend>Оберіть режим</legend>
+					<input type="radio" name="mude" id="PerMin" >
+					   <label for="PerMin">На період часу &nbsp;<br></label>
+					<input type="radio" name="mude" id="quickens" checked>
+					   <label for="quickens">Доганялки<br></label>
+					<!--<input type="radio" name="mude" id="Rem">
+					   <label for="Rem">Запамятай<br></label>-->
+				</fieldset>
+            </form></div>
+        <div class="secondRow"> <div class="BtnStop" id="BtnStop" onclick="stopSession()">Стоп &nbsp;x</div>
+            <div class="innerConteiner" id="innerConteiner">
+            <div id="resultRead" > - - - </div>
+            <input type="button" value="Поїхали" id="btnRead" onclick="ButtonClickRead(this)" name="change" onmouseover="this.value='жми'" onmouseout="this.value='Поїхали'" /></div>
+        </div>
+        <div class="thirdRow"><fieldset><legend>Резаультат</legend>
+					Пройшло часу: <span id="SecondsLeftRead">0</span><br>
+					Відповідей: <span id="Readed">0</span><br>
+					<div id="StatDivRead"><img alt="" src="src/smile.gif" class="smile" id="smileDiv" onclick="this.style.visibility = 'hidden'"></div><!--End StatDivRead--></fieldset></div><!--End ThirdRow-->
+    </div> <!--End Conteiner-->
+    <div class="conteiner">
+        <div class="firstRow">
+             <form name="SettingsForm"><fieldset><legend>Налаштування</legend>
+            Тривалість Заняття:
+        <select name="TimeEx" id="TimeEx">
+            <option value="--">--</option>
+            <option value="30">30</option>
+            <option value="60">60</option>
+
+        </select><hr>Число 1 до:
+        <select name="MaxValue1" id="MaxValue1" >
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="50">50</option>
+            <option value="5">5</option>
+        </select><br>
+         Число 2 до:
+           <select name="MaxValue2" id="MaxValue2" >
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="50">50</option>
+            <option value="5">5</option>
+        </select></fieldset>
+        <fieldset><legend>Оберіть знак</legend>
+        <input type="radio" name="SignSet" id="SPlus">
+           <label for="SPlus">Плюс &nbsp;"+"<br></label>
+        <input type="radio" name="SignSet" id="SMinus">
+           <label for="SMinus">Минус "-"<br></label>
+        <input type="radio" name="SignSet" id="SPlMin">
+           <label for="SPlMin">Минус "+-"<br></label>
+         <input type="radio" name="SignSet" id="Ten"  checked>
+           <label for="Ten">==10<br></label></fieldset>
+      </form>
+        </div>
+        <div class="secondRow"><table class="calc" align="center"><!--  Таблица калькулятора      -->
+    <tr >
+        <td colspan="3">Математичний тренажер </td>
+    </tr> 
+	<tr>
+        <td onclick="BtnClickStart()" id="BtnStart">Старт</td>
+		<td colspan="2"><input id='res' type="text" disabled="true" value=" - - - - -" /></td>	</tr>
+    <tr>
+        <td class="Fst" onclick="CheckAnswer('1')">1</td>
+		<td onclick="CheckAnswer('2')">2</td>
+        <td onclick="CheckAnswer('3')">3</td>
+	</tr>
+    <tr><td onclick="CheckAnswer('4')">4</td><td onclick="CheckAnswer('5')">5</td><td onclick="CheckAnswer('6')">6</td>
+	</tr>
+   <tr>
+        <td onclick="CheckAnswer('7')">7</td><td onclick="CheckAnswer('8')">8</td><td onclick="CheckAnswer('9')">9</td>
+	</tr>
+    <tr>
+        <td onclick="CheckAnswer('0')">0</td><td colspan="2" onclick="ClearAnswer()"><img src="src/ARROW1.png" alt="" id="arrow"</td>
+	</tr>
+        </table></div>
+        <div class="thirdRow"><fieldset><legend>Резаультат</legend>
+            Пройшло: <span id="SecondsLeftCalc">0</span><br>
+            Вірно: <span id="RightAnswers">0</span><br>
+            Невірно: <span id="WrongAnswers">0</span><br>
+        <div id="StatisticDiv"><img alt="" src="src/smile.gif" class="smile" id="smileDivMath" onclick="this.style.visibility = 'hidden'"></div></div>
+            </fieldset>
+    </div>
+   
+	
+	<img alt="" src="src/smile.gif" class="smileBottom" id="smileBottom">
+    
+    
+</body>
+</html>
